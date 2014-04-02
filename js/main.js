@@ -19,7 +19,7 @@ function load(){
   xhr.responseType = 'blob';
   xhr.onload = function(e) {
     if (this.status == 200) {
-      console.log(this.response);
+      console.log('GOT IT');
       var vid = (window.webkitURL ? webkitURL : URL).createObjectURL(this.response);
       video = document.createElement('video');
       video.src = vid;
@@ -30,6 +30,8 @@ function load(){
     }
   };
   xhr.send();
+  console.log('HII');
+
 }
 
 function begin(){
